@@ -84,9 +84,14 @@ exports.addUser = addUser;
  */
 const getAllReservations = function (guest_id, limit = 10) {
   return pool
-    .query(`SELECT reservations.* 
-    FROM reservations 
-    WHERE guest_id = $1`,[guest_id]
+    .query(`SELECT reservations.*, properties.*, AVG(property_reviews.rating) as average_rating
+      FROM property_reviews
+      JOIN reservations ON reservation_id = reservations.id
+      JOIN properties ON property_reviews.property_id = properties.id
+      WHERE reservations.guest_id = $1
+      GROUP BY properties.id, reservations.id
+      ORDER BY start_date ASC
+      LIMIT $2;`, [guest_id, limit]
     )
     .then((result) => {
       return result.rows;
