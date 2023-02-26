@@ -27,12 +27,22 @@ This project was created and published by me as part of my learnings at Lighthou
 
 ## Screenshots
 
+# LightBnB Homepage
+
 !["LightBnB-homepage"](https://raw.githubusercontent.com/n1dddd/LightBnB/master/docs/unknown_004.png)
+
+# LightBnB Login
 
 !["LightBnB-login"](https://raw.githubusercontent.com/n1dddd/LightBnB/master/docs/unknown_005.png)
 
+# LightBnB Registration
+
 !["LightBnB-registration"](https://raw.githubusercontent.com/n1dddd/LightBnB/master/docs/Screenshot-11.png)
 
+# LightBnB Show User Registrations
+
 !["LightBnB-show-reservations"](https://raw.githubusercontent.com/n1dddd/LightBnB/master/docs/unknown_008.png)
+
+# LightBnB Search Function
 
 !["LightBnb-search"](https://raw.githubusercontent.com/n1dddd/LightBnB/master/docs/unknown_006.png)
