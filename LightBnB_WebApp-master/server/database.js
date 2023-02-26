@@ -9,8 +9,6 @@ const pool = new Pool({
 });
 
 
-/// Users
-
 /**
  * Get a single user from the database given their email.
  * @param {String} email The email of the user.
