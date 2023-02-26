@@ -75,7 +75,6 @@ const addUser = function(user) { //adds user to database
         `INSERT INTO users (name, email, password) VALUES ($1, $2, $3) RETURNING *`, [user.name, user.email, user.password])
       .then((result) => {
         let newUser = result.rows;
-        console.log(newUser);
         resolve(newUser);
       })
       .catch((err) => {
@@ -185,8 +184,6 @@ const getAllProperties = (options, limit = 10) => {
   ORDER BY cost_per_night
   LIMIT $${queryParams.length}
   `;
-
-  console.log(queryString, queryParams);
 
   return new Promise((resolve, reject) => {
     pool
